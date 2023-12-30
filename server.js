@@ -4,5 +4,4 @@ const DB = require('./app/model/dataController')
 
 app.listen(PORT, () => {
   console.log(`Server has run on port ${PORT}`)
-  console.log(`DB state: ${JSON.stringify(DB.getData())}`)
 })

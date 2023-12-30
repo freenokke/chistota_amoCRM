@@ -35,6 +35,7 @@ exports.createContact = async (data, token) => {
 }
 
 exports.createLead = async (data, contact, token) => {
+  console.log(token)
   try {
     const { price, services, general, time, date } = data;
 
@@ -46,11 +47,6 @@ exports.createLead = async (data, contact, token) => {
       }
     }, [])
     .filter((item) => item)
-
-    console.log(util.inspect([
-      ...createCustomFields,
-      formatDate(date, time)
-    ], {depth:12}));
 
     await axios.post(`${DOMAIN}/api/v4/leads`,
     [

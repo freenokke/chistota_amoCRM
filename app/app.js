@@ -3,7 +3,9 @@ const cors = require('cors');
 const app = express();
 require('dotenv').config()
 
-app.use(cors());
+app.use(cors({
+  origin: 'https://xn--80aawyogbb2b.xn--p1ai'
+}));
 app.use(express.json())
 
 // ROUTES
